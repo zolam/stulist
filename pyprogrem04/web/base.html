@@ -1,0 +1,36 @@
+<html>
+<style type="text/css">
+  div.tit{
+
+    font-size:125px;
+    text-align: center;
+  }
+</style>
+
+
+
+
+  <head>
+    <div class="tit"><span style="font-weight:bold;color:FF3333;font-family:隶书;">学生管理系统</span></div>
+    <title>{% block title %}缺省标题{% end %}</title>
+    {% block js %}
+    {% end %} 
+  </head>
+  
+  <body background="http://pic.58pic.com/58pic/13/17/94/71H58PICRhd_1024.jpg">
+    <table border=1s align="center"  valign="middle" >
+        <td style='width:10em'>{% block menu %}{% end %}
+        <ul style="list-style-type:none">
+          {% block label1 %}{% end %}
+          {% block label2 %}
+          <a href="/stulist"><img src="http://www.cnr.cn/lvyou/list/201408/W020140828414099469912.gif"> </a>{% end %}
+        </ul>
+        </td>
+        <td>
+        {% block content %}
+        {% end %}          
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
