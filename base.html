@@ -1,0 +1,45 @@
+﻿<html>
+<style type="text/css">
+  div.tit{
+
+    font-size:125px;
+    text-align: center;
+  }
+</style>
+
+
+
+
+  <head>
+    <title>{% block title %}缺省标题{% end %}</title>
+    {% block js %}
+    {% end %} 
+  </head>
+  
+  <body   >
+
+   <div id="Layer1" style="position:absolute; width:100%; height:100%; z-index:-1">    
+<img src="http://android-wallpapers.25pp.com/20131104/1619/5277588f0254215_900x675.jpg" height="100%" width="100%"/> 
+</div>   
+
+<a href="http://gl.tjpu.edu.cn/" target="_blank" style="text-decoration:none;"><div class="tit"><span style="font-weight:bold;color:FF3333;font-family:隶书;">管理学院</span></div></a>
+<div class="tit"><span style="font-weight:bold;color:FF3333;font-family:隶书;">学生管理系统</span></div>
+    <table border=1s align="center"  valign="middle" >
+        <td style='width:10em'>{% block menu %}{% end %}
+        <ul style="list-style-type:none">
+          {% block label1 %}{% end %}
+          {% block label2 %}
+          <a href="/stulist"><img src="http://www.cnr.cn/lvyou/list/201408/W020140828414099469912.gif"/> </a>{% end %}
+        </ul>
+        </td>
+        <td>
+        {% block content %}
+        {% end %}          
+        </td>
+      </tr>
+    </table>
+<a href="http://gl.tjpu.edu.cn/" target="_blank"><img src="http://i5.qhimg.com/dr/250_500_/t01e168868ba8d6d89d.jpg" style="position:absolute;top:100px;" /></a>
+
+
+  </body>
+</html>
