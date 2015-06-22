@@ -1,0 +1,77 @@
+<html>
+<style type="text/css">
+  div.tit{
+
+    font-size:125px;
+    text-align: center;
+  }
+</style>
+
+
+ 
+
+  <head>
+
+    <div class="tit"><span style="font-weight:bold;color:FF9900;font-family:regular script;">学生管理系统</span></div>
+
+    <title>{% block title %}缺省标题{% end %}</title>
+    {% block js %}
+    {% end %} 
+  </head>
+  
+  <body background="http://pic20.nipic.com/20120503/6365032_195813520000_2.jpg">
+
+    <table border="0" align="center" valign="middle">
+    
+        <td style='width:10em'>{% block menu %}{% end %}
+        <ul style="list-style-type:none">
+          {% block label1 %}{% end %} 
+          {% block label2 %}
+          <p>学生信息,please click the picture!</p>
+          <a href="/stulist"><img src="http://www.cnr.cn/lvyou/list/201408/W020140828414099469912.gif"></a> {% end %}
+          <p>新建学生</p> 
+          <a href="/stuedit/new" target="_top">Click here!</a>
+        </ul>
+        </td>
+        <td>
+        {% block content %}
+        {% end %}          
+        </td>
+      </tr>
+    </table>
+    <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+    <DIV id=menu_con>
+        <DIV id=qh_con0 style="DISPLAY: block">
+          <UL><LI>欢迎来到天津工业大学学生管理系统</LI><LI class=menu_line2></LI><LI>今天是：
+  <script language="JavaScript" type="text/JavaScript" >var day="";
+    var month="";
+    var ampm="";
+    var ampmhour="";
+    var myweekday="";
+    var year="";
+    mydate=new Date();
+    myweekday=mydate.getDay();
+    mymonth=mydate.getMonth()+1;
+    myday= mydate.getDate();
+    myyear= mydate.getYear();
+    year=(myyear > 200) ? myyear : 1900 + myyear;
+    if(myweekday == 0)
+    weekday=" 星期日 ";
+    else if(myweekday == 1)
+    weekday=" 星期一 ";
+    else if(myweekday == 2)
+    weekday=" 星期二 ";
+    else if(myweekday == 3)
+    weekday=" 星期三 ";
+    else if(myweekday == 4)
+    weekday=" 星期四 ";
+    else if(myweekday == 5)
+    weekday=" 星期五 ";
+    else if(myweekday == 6)
+    weekday=" 星期六 ";
+    document.write(year+"年"+mymonth+"月"+myday+"日 "+weekday);
+  </script></LI><LI class=menu_line2></LI></UL></DIV> 
+        <DIV id=qh_con1 style="DISPLAY: none">
+
+  </body>
+</html>
