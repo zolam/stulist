@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} 
+  修改课程信息
+{% end %}
+
+{% block label2 %}
+<div align="right"><li><a href="/"><b>返回主页</b></a></li></div>
+{% end %}
+
+{% block content %} 
+	<div align="right"><a href="/stulist"><b>返回学生清单</b></a></div>
+	<hr>
+	<div align="center"><form action="/stuedit/{{student['stu_sn']}}" method="post">
+	学号：<input type="text" name="stu_id" value="{{student['stu_id']}}"><br>
+    姓名：<input type="text" name="name" value="
+    {{student['name']}}"><br>
+    出生日期：<input type="text" name="stu_bir" value="{{student['stu_bir']}}"><br>
+    班级：<input type="text" name="stu_no" value="{{student['stu_no']}}"><br>
+    性别：<input type="text" name="gda" value="{{student['gda']}}"><br><br>
+    <div align="center"><input type="submit" value="提交"></div>
+    </form></div>
+
+{% end %}
